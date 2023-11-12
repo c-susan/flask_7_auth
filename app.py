@@ -4,6 +4,7 @@ from authlib.common.security import generate_token
 from dotenv import load_dotenv
 import os
 from db_functions import update_or_create_user
+from flask_session import Session
 
 load_dotenv()
 
@@ -12,6 +13,9 @@ GOOGLE_CLIENT_SECRET = os.getenv('GOOGLE_CLIENT_SECRET')
 
 app = Flask(__name__)
 app.secret_key = os.urandom(12)
+app.config["SESSION_PERMANENT"] = False
+app.config["SESSION_TYPE"] = "filesystem"
+Session(app)
 oauth = OAuth(app)
 
 @app.route('/')

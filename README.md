@@ -1,6 +1,7 @@
 # flask_7_auth
 HHA504 / Cloud Computing / Assignment 7 / Session Management and User Authentication
 
+This repo aims to dive into the core of application security: user sessions and authentication. Flask and an external identity provider like Google Cloud is utilized, ensure the Flask application is both user-friendly and secure.
 
 # Documentation 
 
@@ -23,5 +24,5 @@ To authenticate user registration, login, and logout, the user authentication sy
 + ```session.pop('user', None)``` is used to destroy the user sessions when they logout. 
 
 ### 3. Cloud-based Authentication System
-
+Cloud-based authentication systems helps to securely authenticate, authorize, and manage users across applications. They allow scalability to accommadate for a growing ammount of users can can include multi-factor authentication and enhanced security. In addition, cloud-based authentication services can integrate with other services and applications to manage user access. 
 
